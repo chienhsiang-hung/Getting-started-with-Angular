@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../products';
 
 @Component({
@@ -6,8 +6,6 @@ import { Product } from '../products';
   templateUrl: './product-alerts.component.html',
   styleUrls: ['./product-alerts.component.css'],
 })
-export class ProductAlertsComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class ProductAlertsComponent {
+  @Input() product!: Product;
 }
